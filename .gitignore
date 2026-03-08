@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+dist/
+Backend/venv/
+Backend/venv_clean/
+.venv/
+.venv_new/
+
+# Python
+__pycache__/
+*.pyc
+Backend/backend_errors.log
+Backend/request_log.txt
+Backend/callback_debug.log
+Backend/callback_hit.txt
+Backend/debug.log
+Backend/debug_start.log
+Backend/error_log.txt
+Backend/error.txt
+Backend/run_log.txt
+Backend/temp_log.txt
+Backend/uvicorn_fresh.log
+Backend/uvicorn_output.log
+Backend/uvicorn_terminal_v*.log
+Backend/twitter_final_error.txt
+
+# Environment / Secrets (DO NOT PUSH)
+.env
+.env.*
+!.env.example
+Backend/.env
+frontend/.env
+*.pem
+*.key
+*.cert
+*.sqlite3
+*.db
+
+# IDE / System
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Project Artifacts
+.gemini/
+yt_connected_shareable.zip
+yt_connected_shareable_full.zip
+yt_connected_full_portable.zip
+tmp/
+C:/Users/sharg/.gemini/antigravity/brain/
+
+# Google Cloud Credentials (NEVER COMMIT!)
+Backend/google-credentials.json
+**/google-credentials*.json
+*-credentials.json
+!package.json
+!package-lock.json
+!tsconfig.json

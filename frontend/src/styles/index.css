@@ -1,0 +1,151 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Prevent text size adjustment on mobile */
+* {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Reset */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* ========================================
+   LOGIN PAGE LAYOUT (Split Screen)
+   ======================================== */
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #E8E9D8;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* MOBILE LAYOUT - Stacked naturally */
+.hero-panel {
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+}
+
+.login-panel {
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  background: #3C4650;
+}
+
+/* DESKTOP LAYOUT - Split Screen */
+@media (min-width: 1024px) {
+  .app-container {
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  .main-content {
+    flex-direction: row;
+    height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .hero-panel {
+    width: 55%;
+    height: 100vh;
+    order: 2;
+  }
+
+  .login-panel {
+    width: 45%;
+    height: 100vh;
+    order: 1;
+    overflow-y: auto;
+  }
+}
+
+/* LARGE DESKTOP LAYOUT (1440px+) */
+@media (min-width: 1440px) {
+  .main-content {
+    width: 1440px;
+  }
+}
+
+/* Footer - hidden on desktop, shown on mobile */
+.footer-section {
+  display: block;
+  width: 100%;
+  background: #4A5A52;
+  padding: 2rem 0;
+  color: white;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+@media (min-width: 1024px) {
+  .footer-section {
+    display: none;
+  }
+}
+
+.footer-brand {
+  margin-bottom: 1rem;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-links a {
+  font-family: 'Inter', sans-serif;
+  color: #C4CEC7;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+}
