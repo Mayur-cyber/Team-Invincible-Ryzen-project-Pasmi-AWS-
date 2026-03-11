@@ -6,7 +6,7 @@ Target Market: 50M+ Indian creators in ₹4,500 Cr creator economy losing ₹40K
 Core Value: 98.7% time saved | 7X content output | ₹35K/month extra earnings per creator.
 
 **🔥 Demo Video**
-[ <!-- Replace with actual demo link -->
+https://drive.google.com/file/d/1jj6kGaBL9mADAX9EDbmlvoyq1JkzZBWw/view?usp=sharing
 
 🔥working link 
 http://13.50.242.241
