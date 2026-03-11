@@ -11,9 +11,10 @@ class User(Base):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
-    username = Column(String(255), unique=True, index=True, nullable=True) # made optional
+    username = Column(String(255), unique=True, index=True, nullable=True)  # made optional
+    full_name = Column(String(255), nullable=True)  # display name
     email = Column(String(255), unique=True, index=True, nullable=False)
-    hashed_password = Column(String(255), nullable=True) # nullable for google users
+    hashed_password = Column(String(255), nullable=True)  # nullable for google users
     google_id = Column(String(255), unique=True, index=True, nullable=True)
     is_active = Column(Boolean, default=True)
     created_at = Column(DateTime, default=datetime.utcnow)

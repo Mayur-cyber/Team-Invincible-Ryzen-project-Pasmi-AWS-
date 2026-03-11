@@ -18,7 +18,6 @@ from sqlalchemy.orm import Session
 from app.core.mysql_database import get_db
 import requests as std_requests
 from google.auth.transport import requests
-import requests as std_requests
 
 
 # Get JWT secret from environment variable
@@ -32,7 +31,9 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 # Google OAuth2 Settings
 GOOGLE_CLIENT_ID = settings.GOOGLE_CLIENT_ID
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/login")
+# auto_error=False so the dependency returns None (instead of raising 401)
+# when no Bearer token is in the header — allowing cookie-based auth to work.
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/login", auto_error=False)
 
 
 def hash_password(password: str) -> str:
