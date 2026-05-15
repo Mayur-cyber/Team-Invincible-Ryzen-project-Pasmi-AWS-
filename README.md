@@ -8,8 +8,7 @@ Core Value: 98.7% time saved | 7X content output | ₹35K/month extra earnings p
 **🔥 Demo Video**
 https://drive.google.com/file/d/1jj6kGaBL9mADAX9EDbmlvoyq1JkzZBWw/view?usp=sharing
 
-🔥working link 
-http://13.50.242.241
+
 
 **💡 Why PASMI?**
 
